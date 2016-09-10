@@ -4,11 +4,11 @@ import java.text.DecimalFormat;
 import java.util.*;
 
 public class Config {
-/*	////////////////// PATH RELATED ///////////
-	public static String HOME = "C:/sites/healthpath/data/";
-	public static String RESULTS_HOME = "C:/sites/healthpath/data/results/";
-	public static int READ_ALL_THE_FILE = 10000000; // lines of a PSV/CSV to read
-	public static int READ_SOME_OF_FILE = 1000; // lines of a PSV/CSV to read
+	////////////////// PATH RELATED ///////////
+	public static String HOME = "C://HEALTHPATH2//";
+	public static String RESULTS_HOME = HOME + "results//";
+//	public static int READ_ALL_THE_FILE = 10000000; // lines of a PSV/CSV to read
+//	public static int READ_SOME_OF_FILE = 1000; // lines of a PSV/CSV to read
 	
 	public static String testfile = "test_22_24_29.csv";
 	public static String RAW_INPUT_FILE = "pd_raw_pharma_22_24_29.csv"; // raw
@@ -146,4 +146,4 @@ public class Config {
 		}
 		return header;
 	}
-*/}
+}

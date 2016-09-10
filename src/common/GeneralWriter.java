@@ -26,7 +26,6 @@ public class GeneralWriter {
 		}
 	}
 
-
 	public void step2_of_2(String row) {
 		try (FileWriter fw = new FileWriter(targetPSV, true);
 				BufferedWriter bw = new BufferedWriter(fw);
