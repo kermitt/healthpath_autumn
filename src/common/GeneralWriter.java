@@ -8,6 +8,7 @@ import common.Caller;
 
 public class GeneralWriter {
 	private String targetPSV = null;
+	private int depth = 0;
 
 	public GeneralWriter(String targetPSV ) {
 		this.targetPSV = targetPSV;
@@ -25,7 +26,6 @@ public class GeneralWriter {
 		}
 	}
 
-	private int depth = 0;
 
 	public void step2_of_2(String row) {
 		try (FileWriter fw = new FileWriter(targetPSV, true);

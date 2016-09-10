@@ -1,7 +1,5 @@
 package kmeans;
 
-import common.Config;
-
 public class _ReduxAttractor extends _ReduxHyperspace {
 	public int id;
 	public double[] vector;
@@ -18,9 +16,9 @@ public class _ReduxAttractor extends _ReduxHyperspace {
 		String location = ""; 
 		for ( int i = 0; i < vector.length; i++ ) { 
 			if ( i < vector.length - 1 ) {
-				location += Config.roundTwoDecimals(vector[i]) + ",\t";
+				location += _ReduxLibrary.roundTwoDecimals(vector[i]) + ",\t";
 			} else {
-				location += Config.roundTwoDecimals(vector[i]);
+				location += _ReduxLibrary.roundTwoDecimals(vector[i]);
 			}
 		}
 		return location;
@@ -36,8 +34,12 @@ public class _ReduxAttractor extends _ReduxHyperspace {
 			vector[i] /= count;
 		}		
 	}
-	/*
+
+	/* Not really in use any more, but it was nice in the TDD stage 
+	 * This is a candidate to be removed
+	 */
 	public String describe() {
+		
 		String out  = count + "   ATTRACTOR: " + id + ":\t"; 
 		for ( int i = 0; i < vector.length; i++ ) { 
 			out += vector[i] + "|";
@@ -45,5 +47,5 @@ public class _ReduxAttractor extends _ReduxHyperspace {
 		out += "   " + vector.length;
 		return out;
 	}
-	*/
+
 }

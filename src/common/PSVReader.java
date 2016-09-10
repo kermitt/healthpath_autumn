@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 import common.Caller;
 
-public class PSVReader extends FeatureRouter {
+public class PSVReader { //extends FeatureRouter {
 	
 	public PSVReader() { 
 	}
@@ -108,7 +108,4 @@ public class PSVReader extends FeatureRouter {
 		}
 		return null;
 	}
-	
-	
-	
 }

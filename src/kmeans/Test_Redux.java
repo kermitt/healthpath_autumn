@@ -42,10 +42,16 @@ public class Test_Redux {
 	}
 	public void createAttractors_step2() { 
 		rsm.createAttractors_step2();
-		for ( Integer key : rsm.attractors.keySet()) {
-			_ReduxAttractor a = rsm.attractors.get(key);
-			//Caller.log( a.describe());
+
+		boolean show_action = false;
+		
+		if ( show_action) {
+			for ( Integer key : rsm.attractors.keySet()) {
+				_ReduxAttractor a = rsm.attractors.get(key);
+				Caller.log( a.describe());
+			}
 		}
+
 		boolean isOk = rsm.attractors.size() > 0;
 		int shape = rsm.observations.get(0).vector.length;
 		isOk &= rsm.attractors.get(0).vector.length == shape;
@@ -73,9 +79,12 @@ public class Test_Redux {
 			rsm.addPoints_step1(raw[i], 0,0,0,0,0,0,0,0,0,0,0);
 		}
 		
-		for ( Integer key : rsm.observations.keySet()) {
-			_ReduxPoint o = rsm.observations.get(key);
-			//Caller.log( o.describe());
+		boolean show_activity = false;
+		if ( show_activity ) { 
+			for ( Integer key : rsm.observations.keySet()) {
+				_ReduxPoint o = rsm.observations.get(key);
+				Caller.log( o.describe());
+			}
 		}
 		
 		boolean isOk = rsm.observations.size() == raw.length;

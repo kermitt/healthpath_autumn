@@ -1,8 +1,6 @@
 package kmeans;
 
 import common.Caller;
-import common.Config;
-
 import java.util.*;
 
 public class ReduxShiftMeans {
@@ -73,16 +71,16 @@ public class ReduxShiftMeans {
 
 			String locationA = "";
 			for (int i = 0; i < ary.length; i++) {
-				locationA += Config.roundTwoDecimals(ary[i]) + "\t";
+				locationA += _ReduxLibrary.roundTwoDecimals(ary[i]) + "\t";
 			}
 
 			double[] ary2 = beforeLoc.get(key);
 
 			String locationB = "";
 			for (int i = 0; i < ary2.length; i++) {
-				locationB += Config.roundTwoDecimals(ary2[i]) + "\t";
+				locationB += _ReduxLibrary.roundTwoDecimals(ary2[i]) + "\t";
 			}
-			Caller.log("    AFTER: " + key + " | " + locationA + "\t|" + attractors.get(key).count);
+			Caller.log("LOCATIONS| BEFORE: " + locationB + "    AFTER: " + key + " | " + locationA + "\t|" + attractors.get(key).count);
 		}
 	}
 
@@ -99,9 +97,9 @@ public class ReduxShiftMeans {
 				}
 			}
 
-			for (Integer aKey : attractors.keySet()) {
-				_ReduxAttractor a = attractors.get(aKey);
-			}
+//			for (Integer aKey : attractors.keySet()) {
+//				_ReduxAttractor a = attractors.get(aKey);
+//			}
 
 			attractors = new HashMap<>();
 			for (Integer oKey : observations.keySet()) {

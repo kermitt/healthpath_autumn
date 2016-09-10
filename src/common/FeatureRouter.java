@@ -2,6 +2,8 @@ package common;
 import java.util.HashMap;
 import java.util.LinkedHashMap; 
 import java.util.Map;
+
+import common.features.FeaturesLookup_Claims;
 /*
  * Question: Not sure what to call this yet but...What does it do? 
  * Answer: It will hold Map-of-Maps-of-Features-and-their-values. The 'values' will be 'seen' objects
@@ -9,12 +11,13 @@ import java.util.Map;
  * 
  * Maybe 'Feature' or 'FeatureRouter' or 'FeatureSeenCount' or... erm.
  */
+/* 
 public class FeatureRouter {
 	
 	//public Map<String, Map<String, Seen>> router = new HashMap<>();
 	public LinkedHashMap <String, Map<String, Seen>> router = new LinkedHashMap<>();  
 	public FeatureRouter() {		
-		LinkedHashMap <String, String>lhm = Config.getFeatures();
+		LinkedHashMap <String, String>lhm = FeaturesLookup_Claims.getFeatures();
 		for ( String key : lhm.keySet()) {
 			router.put(key, new HashMap<String, Seen>());
 		}
@@ -29,4 +32,6 @@ public class FeatureRouter {
 			router.get(feature).put(value, new Seen());
 		}
 	}
+
 }
+*/ 

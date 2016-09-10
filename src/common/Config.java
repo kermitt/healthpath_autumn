@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.*;
 
 public class Config {
-	////////////////// PATH RELATED ///////////
+/*	////////////////// PATH RELATED ///////////
 	public static String HOME = "C:/sites/healthpath/data/";
 	public static String RESULTS_HOME = "C:/sites/healthpath/data/results/";
 	public static int READ_ALL_THE_FILE = 10000000; // lines of a PSV/CSV to read
@@ -112,10 +112,8 @@ public class Config {
 	public static String BOOLEAN = "boolean";
 
 	public static LinkedHashMap<String, String> getFeatures() {
-		/*
-		 * return the features and the type of each feature, to be read in from
-		 * the originating .csv file
-		 */
+		
+
 		LinkedHashMap<String, String> features = new LinkedHashMap<>();
 		features.put("person_id", STRING);
 		features.put("gender_code", STRING);
@@ -148,4 +146,4 @@ public class Config {
 		}
 		return header;
 	}
-}
+*/}
